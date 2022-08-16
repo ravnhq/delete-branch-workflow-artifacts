@@ -1,0 +1,13 @@
+name: 'Delete Branch Workflow Artifacts'
+description: 'Github action to delete artifacts on workflows associated with a branch'
+author: 'RavnHQ'
+inputs:
+  branch-ref:
+    required: true
+    description: 'commit sha or branch name that artifacts should be deleted from'
+  token:
+    required: true
+    description: 'Github access token'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
